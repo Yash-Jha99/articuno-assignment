@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "name": "John Doe",
+        "email": "john.doe@gmail.com",
+        "passwordHash": "$2b$12$3nWqhna.KPtjJ./tUlmQoeopy7Q4LbT7SoXQ.luxa6IdiZzIMSgEy"
+    },
+    {
+        "id": "2",
+        "name": "Jane Smith",
+        "email": "jane.smith@gmail.com",
+        "passwordHash": "$2b$12$3nWqhna.KPtjJ./tUlmQoeopy7Q4LbT7SoXQ.luxa6IdiZzIMSgEy"
+    },
+    {
+        "id": "3",
+        "name": "Tony Stark",
+        "email": "tony.tark@gmail.com",
+        "passwordHash": "$2b$12$3nWqhna.KPtjJ./tUlmQoeopy7Q4LbT7SoXQ.luxa6IdiZzIMSgEy"
+    }
+]
