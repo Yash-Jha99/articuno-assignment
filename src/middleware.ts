@@ -15,5 +15,5 @@ export default withAuth(
 
 // See "Matching Paths" below to learn more
 export const config = {
-  matcher: ["/profile", "/post/:path*"],
+  matcher: ["/profile", "/post/edit", "/post/create", "/post"],
 };

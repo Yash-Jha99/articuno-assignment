@@ -14,12 +14,14 @@ const Post = ({ id, title, content, userId, className = "" }: Props) => {
   const { data } = useSession();
   return (
     <div
-      className={`relative h-[25rem] w-full rounded-xl bg-white/10 p-6 ${className}`}
+      className={`relative h-[20rem] w-full  rounded-xl bg-white/10 p-6 ${className}`}
     >
-      <div className="flex flex-col space-y-4">
-        <div className="w-11/12 truncate text-2xl font-bold">{title}</div>
-        <div className="text-lg">{content}</div>
-      </div>
+      <Link href={`/post/${id}`} className="block h-[17rem] overflow-hidden">
+        <div className="flex  flex-col space-y-4 ">
+          <div className="w-11/12 truncate text-2xl font-bold">{title}</div>
+          <div className="text-lg">{content}</div>
+        </div>
+      </Link>
       {data?.user.id === userId && (
         <Link href={`/post/edit?id=${id}`} className="absolute right-4 top-4">
           <svg

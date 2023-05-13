@@ -21,10 +21,10 @@ const Posts: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
+        <main className="flex min-h-screen flex-col items-center  bg-gradient-to-b from-[#2e026d] to-[#15162c]">
           <div
             ref={pageRef}
-            className="container flex flex-col items-center justify-center gap-12 px-4 py-4 "
+            className="container flex flex-col items-center gap-12 px-4 py-4 "
           >
             {status === "error" && (
               <div className="text-2xl text-white">

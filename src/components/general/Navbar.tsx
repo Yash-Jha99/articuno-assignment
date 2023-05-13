@@ -18,7 +18,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/"
-                className="block rounded bg-blue-700 py-2 pl-3 pr-4 text-2xl text-white md:bg-transparent md:p-0 md:text-blue-700 md:dark:text-blue-500"
+                className="block rounded bg-blue-700 py-2 pl-3 pr-4 text-2xl text-white md:bg-transparent md:p-0 "
                 aria-current="page"
               >
                 Home
@@ -29,7 +29,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href="/post"
-                    className="block rounded bg-blue-700 py-2 pl-3 pr-4 text-2xl text-white md:bg-transparent md:p-0 md:text-blue-700 md:dark:text-blue-500"
+                    className="block rounded bg-blue-700 py-2 pl-3 pr-4 text-2xl text-white md:bg-transparent md:p-0 "
                     aria-current="page"
                   >
                     My Posts
@@ -38,7 +38,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href="/profile"
-                    className="block rounded bg-blue-700 py-2 pl-3 pr-4 text-2xl text-white md:bg-transparent md:p-0 md:text-blue-700 md:dark:text-blue-500"
+                    className="block rounded bg-blue-700 py-2 pl-3 pr-4 text-2xl text-white md:bg-transparent md:p-0 "
                     aria-current="page"
                   >
                     {sessionData.user.name}
@@ -47,7 +47,7 @@ const Navbar = () => {
                 <li>
                   <button
                     onClick={() => void signOut()}
-                    className="block rounded bg-blue-700 py-2 pl-3 pr-4 text-2xl text-white md:bg-transparent md:p-0 md:text-blue-700 md:dark:text-blue-500"
+                    className="block rounded bg-blue-700 py-2 pl-3 pr-4 text-2xl text-white md:bg-transparent md:p-0 "
                     aria-current="page"
                   >
                     Logout
@@ -58,7 +58,7 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/auth/signin"
-                  className="block rounded bg-blue-700 py-2 pl-3 pr-4 text-2xl text-white md:bg-transparent md:p-0 md:text-blue-700 md:dark:text-blue-500"
+                  className="block rounded bg-blue-700 py-2 pl-3 pr-4 text-2xl text-white md:bg-transparent md:p-0 "
                   aria-current="page"
                 >
                   Login

@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import Layout from "~/components/Layout";
 import Pagination from "~/components/general/Pagination";
 import Post from "~/components/post/Post";
+import PostSkeleton from "~/components/post/PostSkeleton";
 import { api } from "~/utils/api";
 
 const MyPosts: NextPage = () => {
@@ -19,8 +20,8 @@ const MyPosts: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
-          <div className="container flex flex-col items-center justify-center gap-12 px-4 py-4 ">
+        <main className="flex min-h-screen flex-col items-center  bg-gradient-to-b from-[#2e026d] to-[#15162c]">
+          <div className="container flex flex-col items-center  gap-12 px-4 py-4 ">
             <Link
               href="/post/create"
               className="mt-20 rounded bg-green-500 px-4 py-2 text-sm font-bold text-white hover:bg-green-700 "
@@ -34,7 +35,7 @@ const MyPosts: NextPage = () => {
             )}
             <div className=" grid grid-cols-1 gap-4 text-white sm:grid-cols-3 md:gap-8">
               {status === "loading"
-                ? "Loading..."
+                ? [1, 2, 3].map((item) => <PostSkeleton key={item} />)
                 : posts?.map((post) => <Post key={post.id} {...post} />)}
             </div>
             <Pagination

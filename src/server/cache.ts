@@ -12,7 +12,7 @@ export const redis =
 if (env.NODE_ENV !== "production") globalForRedis.redis = redis;
 
 const main = async () => {
-  await redis.connect();
+  if (!redis.isOpen) await redis.connect();
 };
 
 main()

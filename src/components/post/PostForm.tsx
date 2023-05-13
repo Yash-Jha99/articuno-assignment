@@ -76,7 +76,7 @@ const PostForm = ({ data, onSave }: Props) => {
         <textarea
           value={content}
           name="content"
-          rows={6}
+          rows={8}
           className={` mb-1 w-full appearance-none rounded border bg-inherit px-3 py-2 text-lg leading-tight text-gray-700 focus:outline-blue-500 dark:text-white dark:focus:outline-blue-500 ${
             error.content && "border-red-500"
           }`}
