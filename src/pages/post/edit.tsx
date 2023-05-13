@@ -34,9 +34,9 @@ const EditPost = () => {
             <h1 className="text-4xl font-bold tracking-tight text-white">
               Edit Post
             </h1>
-            <div className="w-full rounded-xl bg-white/10 p-4 sm:w-1/3">
+            <div className="w-full rounded-xl bg-white/10 p-4 text-xl text-white sm:w-1/3">
               {isLoading ? (
-                "Loading"
+                "Loading..."
               ) : (
                 <PostForm data={editableData as Post} onSave={handleEdit} />
               )}

@@ -19,8 +19,7 @@ export const postRouter = createTRPCRouter({
     .mutation(async ({ ctx, input }) => {
       const { id } = ctx.session.user;
       const keys = await redis.keys("*posts*");
-
-      await redis.DEL([...keys]);
+      if (keys?.length !== 0) await redis.DEL([...keys]);
       return await ctx.prisma.post.create({ data: { userId: id, ...input } });
     }),
 
@@ -34,7 +33,7 @@ export const postRouter = createTRPCRouter({
     )
     .mutation(async ({ ctx, input }) => {
       const keys = await redis.keys("*posts*");
-      await redis.del([...keys]);
+      if (keys?.length !== 0) await redis.DEL([...keys]);
       return await ctx.prisma.post.update({
         data: { ...input },
         where: { id: input.id },
