@@ -7,12 +7,17 @@ const globalForRedis = globalThis as unknown as {
 };
 
 export const redis =
-  globalForRedis.redis ?? createClient({ url: env.REDIS_URL });
+  globalForRedis.redis ??
+  createClient({
+    url: env.REDIS_URL,
+    socket: { tls: env.NODE_ENV === "production" },
+  });
 
 if (env.NODE_ENV !== "production") globalForRedis.redis = redis;
 
 const main = async () => {
   if (!redis.isOpen) await redis.connect();
+  console.log(await redis.PING());
 };
 
 main()

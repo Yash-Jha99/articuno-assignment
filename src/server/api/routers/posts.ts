@@ -61,9 +61,8 @@ export const postRouter = createTRPCRouter({
           take: 10,
           skip: (page - 1) * 10,
         });
-
-        await redis.set(`posts[${page}]`, JSON.stringify({ count, data }));
         result = { count, data };
+        await redis.set(`posts[${page}]`, JSON.stringify({ count, data }));
       }
       return result;
     }),
